@@ -15,7 +15,7 @@ public class Customer {
     private String name;
     private String email;
 
-    @OneToMany(mappedBy = "customer", cascade = CascadeType.REMOVE)
+    @OneToMany(mappedBy = "customer")
     //Dans la classe BankAccount y'a un attribut "customer" qui utilise @ManyToOne et il s'agit de la meme relation
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY) //ignorer list bank account pas la peine de sérialiser mais j'aurai pas la liste des comptes, il faut faire appel aux dtos pour préciser les données qu'on veut
     private List<BankAccount> bankAccounts;

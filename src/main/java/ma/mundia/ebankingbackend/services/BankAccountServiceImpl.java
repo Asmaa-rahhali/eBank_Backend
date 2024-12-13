@@ -112,6 +112,7 @@ public class BankAccountServiceImpl implements BankAccountService{
         accountOperation.setAmount(amount);
         accountOperation.setDescription(description);
         accountOperation.setOperationDate(new Date());
+        accountOperation.setBankAccount(bankAccount);
         accountOperationRepository.save(accountOperation);
         bankAccount.setBalance(bankAccount.getBalance()-amount);
         bankAccountRepository.save(bankAccount);
@@ -127,6 +128,7 @@ public class BankAccountServiceImpl implements BankAccountService{
         accountOperation.setAmount(amount);
         accountOperation.setDescription(description);
         accountOperation.setOperationDate(new Date());
+        accountOperation.setBankAccount(bankAccount);
         accountOperationRepository.save(accountOperation);
         bankAccount.setBalance(bankAccount.getBalance()+amount);
         bankAccountRepository.save(bankAccount);
@@ -180,12 +182,10 @@ public class BankAccountServiceImpl implements BankAccountService{
     @Override
     public AccountHistoryDTO getAccountHistory(String accountId, int page, int size) throws BankAccountNotFoundException {
         BankAccount bankAccount= bankAccountRepository.findById(accountId).orElse(null);
-        if (bankAccount==null){
-            throw new BankAccountNotFoundException("Account not found");
-        }
+        if (bankAccount==null) throw new BankAccountNotFoundException("Account not found");
         Page<AccountOperation> accountOperations = accountOperationRepository.findByBankAccount_Id(accountId, PageRequest.of(page, size));
-        AccountHistoryDTO accountHistoryDTO= new AccountHistoryDTO();
         List<AccountOperationDTO> accountOperationDTOs = accountOperations.getContent().stream().map(op -> dtoMapper.fromAccountOperation(op)).collect(Collectors.toList());
+        AccountHistoryDTO accountHistoryDTO= new AccountHistoryDTO();
         accountHistoryDTO.setAccountOperationDTOS(accountOperationDTOs);
         accountHistoryDTO.setAccountId(bankAccount.getId());
         accountHistoryDTO.setBalance(bankAccount.getBalance());
