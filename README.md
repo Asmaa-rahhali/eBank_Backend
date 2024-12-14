@@ -1,11 +1,10 @@
 <h1>Projet JEE - Digital Banking</h1>
 <p>Ce projet illustre la gestion des comptes bancaires, avec deux types de comptes : Comptes Courants et Comptes Épargnes.</p>
-<hr>
+
 <h2>Gestion des Comptes Bancaires</h2>
 
 <h3>Affichage d'un compte par ID</h3>
 <img src="captures/AccountById.png" alt="Affichage d'un compte par ID" width="800">
-<img src="captures/AccountByIdSwagger.png" alt="Swagger UI pour l'affichage d'un compte par ID" width="800">
 
 <h3>Liste de tous les comptes bancaires</h3>
 <img src="captures/accounts.png" alt="Liste des comptes bancaires" width="800">
@@ -37,7 +36,6 @@
 <h4> Après Modification</h4>
 <img src="captures/après-modif.png" alt="Données après modification" width="800">
 
-<hr>
 
 <h2>Gestion des Opérations Bancaires</h2>
 
@@ -60,7 +58,6 @@
 <h3>Opérations paginées pour un compte</h3>
 <img src="captures/operationsByAccwithsizepageParams.png" alt="Opérations avec pagination pour un compte" width="800">
 
-<hr>
 
 <h2>Gestion des Virements</h2>
 
@@ -72,6 +69,6 @@
 
 <h3>Après le Virement</h3>
 <img src="captures/AfterTransfer.png" alt="Solde après le Virement" width="800">
-
+<hr>
 <h3>Auteur</h3>
 <p>Réalisé par : Rahhali Asmaa</p>
