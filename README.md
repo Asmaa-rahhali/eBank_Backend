@@ -14,7 +14,6 @@
 <img src="captures/all_accs_h2.png" alt="Base de données H2 - Liste des comptes" width="800">
 <h3>Base de données MySQL</h3>
 <img src="captures/MySQLDB.png" alt="Base de données MySQL - Liste des comptes" width="800">
-<hr>
 
 <h2>Gestion des Clients</h2>
 
@@ -69,6 +68,6 @@
 
 <h3>Après le Virement</h3>
 <img src="captures/AfterTransfer.png" alt="Solde après le Virement" width="800">
-<hr>
+
 <h3>Auteur</h3>
 <p>Réalisé par : Rahhali Asmaa</p>
