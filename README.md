@@ -1,5 +1,5 @@
 <h1>Projet JEE - Digital Banking</h1>
-<p>Ce projet illustre la gestion des comptes bancaires, avec deux types de comptes : Comptes Courants et Comptes Épargnes.</p>
+<p>Ce projet illustre la gestion des comptes bancaires, avec deux types de comptes: Comptes Courants et Comptes Épargnes.</p>
 
 <h2>Gestion des Comptes Bancaires</h2>
 
